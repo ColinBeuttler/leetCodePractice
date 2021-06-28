@@ -8,15 +8,24 @@ let nums2 = [2,2]
 
 let s = 'leetcode'
 
-const firstUnique = str =>{
-    const l =s.split('')
-    let objectB = {}
-}
+let prices = [1, 2, 3, 4, 5, 6, 7];
+
+let string = 'Colin';
+
+const stringSplit = str => {
+  return [...str].reverse().join('');
+};
+
+console.log(stringSplit(string));
+
+// const firstUnique = str =>{
+//     const l =s.split('')
+//     let objectB = {}
+// }
 
 
 
-console.log(mapS)
-
+// console.log(mapS)
 
 // let xValue = '123'
 
@@ -55,3 +64,117 @@ console.log(mapS)
 
 // twoSum(nums)
 
+// const twoSums = arr => {
+//   let target = 4;
+//   let sums = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (i == target - j) {
+//         sums.push(i, j);
+//       }
+//     }
+//   }
+//   console.log(sums);
+// };
+
+// twoSums(nums);
+
+// const sortArrZeros = function (arr) {
+//   for (let i = 0; i > arr.length; i++) {
+//     if (arr[i] === 0) {
+//       arr.splice(i, 1);
+//       // arr.push(arr[i]);
+//     }
+//   }
+//   return arr;
+// };
+
+// console.log(sortArrZeros(nums2));
+
+// nums.forEach((c, index) => {
+//   console.log(`${c} - ${index} - ${nums.indexOf(c)}`);
+// });
+
+// let removeDupliucates = nums.filter((c, index) => {
+//   return nums.indexOf(c) == index;
+// });
+
+// console.log(removeDupliucates);
+
+// let uniqueChar = [];
+
+// nums.forEach(c => {
+//   if (!uniqueChar.includes(c)) {
+//     uniqueChar.push(c);
+//   }
+// });
+
+// console.log(uniqueChar);
+
+// buying prices
+// let buyPrices = function (arr) {
+//   // set two pointers, one at 0, one at 1
+//   let diff;
+//   // loop through the whole array this way
+//   for (let i = 0; i < arr.length; i++) {
+//     diff = Math.abs(arr[i] - arr[i + 1]);
+//     // push the values to a new array
+//     console.log(diff);
+//   }
+
+// take the values, find the highest
+
+// return the highest of these values
+// };
+
+// buyPrices(prices);
+
+// function to callback
+// let reverseArr = function (arr) {
+//   // for loop for array
+//   for (let i = 0; i > arr.length; i++) {
+//     // rotate array here
+//     arr.unshift(arr.pop());
+//   }
+//   return arr;
+// };
+
+// // callback rotated array
+// console.log(reverseArr(prices));
+
+// const findDuplicates = function (arr) {
+//   for (let i = 0; i > arr.length; i++) {
+//     for (let j = 0; j > arr.length; j++) {
+//       if (arr[i] === arr[j]) {
+//         return true;
+//       }
+//     }
+//   }
+// };
+
+// if (findDuplicates(nums) == true) {
+//   ;
+// }
+
+// console.log(findDuplicates(nums));
+
+// //////// Filter for non-repeating numbers
+
+// find the dulpicates
+// const returnNonRepeats = function (arr) {
+//   // first loop through for i
+//   for (let i = 0; i < arr.length; i++) {
+//     // then loop through for j
+//     for (let j = 0; j < arr.length; j++) {
+//       // if statement when conditions are met
+//       if (arr[i] == arr[j]) {
+//         // return the non-repaeting var
+//         return arr[i];
+//       }
+//     }
+//   }
+// };
+
+// console.log(returnNonRepeats(nums));
+
+// const intersecting = nums.filter(value => nums2.indexOf(value));
