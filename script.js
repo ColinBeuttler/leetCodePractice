@@ -18,16 +18,22 @@ let prices = [1, 2, 3, 4, 5, 6, 7];
 
 // let string = 'Colin';
 
-const anaSort = (str, str2) => {
-  let a = str.split('').sort();
-  let b = str2.split('').sort();
-  for (let i = 0; i < a.length; i++)
-    if (a.length == b.length) {
-      if (a[i] == b[i]) {
-        return true;
-      } else return false;
-    } else return false;
-};
+let matrix = [[1,2,3], [4,5,6], [7,8,9]]
+
+const rotateArr= (arr)=> arr[0].map((x, i) => arr.map(x=>x[i]))
+
+console.log(rotateArr(matrix))
+
+// const anaSort = (str, str2) => {
+//   let a = str.split('').sort();
+//   let b = str2.split('').sort();
+//   for (let i = 0; i < a.length; i++)
+//     if (a.length == b.length) {
+//       if (a[i] == b[i]) {
+//         return true;
+//       } else return false;
+//     } else return false;
+// };
 
 // const stringSplit = (str, str2) => {
 //   let frwd = [...str].reverse().join('');
@@ -37,9 +43,9 @@ const anaSort = (str, str2) => {
 //   } else return false;
 // };
 
-console.log(anaSort(s, v));
+// console.log(anaSort(s, v));
 
-console.log(anaSort(s, x));
+// console.log(anaSort(s, x));
 
 // console.log(stringSplit(string));
 
