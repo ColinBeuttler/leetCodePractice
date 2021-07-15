@@ -1,29 +1,52 @@
 'use strict';
 
-let nums =[0,1,0,1,8]
+let nums = [0, 1, 0, 1, 8];
 
-let nums1 = [1,2,2,1]
+let nums1 = [1, 2, 2, 1];
 
-let nums2 = [2,2]
+let nums2 = [2, 2];
 
-let s = 'leetcode'
+let s = 'leetcode';
+
+let v = 'edocteel';
+
+let x = 'lectedoe';
+
+let t = 'hifi';
 
 let prices = [1, 2, 3, 4, 5, 6, 7];
 
-let string = 'Colin';
+// let string = 'Colin';
 
-const stringSplit = str => {
-  return [...str].reverse().join('');
+const anaSort = (str, str2) => {
+  let a = str.split('').sort();
+  let b = str2.split('').sort();
+  for (let i = 0; i < a.length; i++)
+    if (a.length == b.length) {
+      if (a[i] == b[i]) {
+        return true;
+      } else return false;
+    } else return false;
 };
 
-console.log(stringSplit(string));
+// const stringSplit = (str, str2) => {
+//   let frwd = [...str].reverse().join('');
+//   let bkwd = str2;
+//   if (frwd === bkwd) {
+//     return true;
+//   } else return false;
+// };
+
+console.log(anaSort(s, v));
+
+console.log(anaSort(s, x));
+
+// console.log(stringSplit(string));
 
 // const firstUnique = str =>{
 //     const l =s.split('')
 //     let objectB = {}
 // }
-
-
 
 // console.log(mapS)
 
@@ -50,16 +73,15 @@ console.log(stringSplit(string));
 // //
 // console.log(zerosBack(nums))
 
-
 // const twoSum = function(arr){
 //     let sums =[]
 //     for(let i =0; i < arr.length; i++){
 //             if(i == 1){
 //                 sums.push(i)
-                
+
 //         }
 //     }
-//     console.log(sums) 
+//     console.log(sums)
 // }
 
 // twoSum(nums)
