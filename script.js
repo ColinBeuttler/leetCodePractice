@@ -14,15 +14,25 @@ let x = 'lectedoe';
 
 let t = 'hifi';
 
-let prices = [1, 2, 3, 4, 5, 6, 7];
+let prices = [1, 2, 3, 4, 5, 6, 7,2];
 
 // let string = 'Colin';
 
-let matrix = [[1,2,3], [4,5,6], [7,8,9]]
+// let matrix = [[1,2,3], [4,5,6], [7,8,9]]
 
-const rotateArr= (arr)=> arr[0].map((x, i) => arr.map(x=>x[i]))
+// const rotateArr= (arr)=> arr[0].map((x, i) => arr.map(x=>x[i]))
 
-console.log(rotateArr(matrix))
+// console.log(rotateArr(matrix))
+
+
+
+let arr = []
+
+const uniqueChar=(str)=>{
+ str.forEach()
+  
+}
+console.log(uniqueChar(prices))
 
 // const anaSort = (str, str2) => {
 //   let a = str.split('').sort();
