@@ -14,7 +14,26 @@ let x = 'lectedoe';
 
 let t = 'hifi';
 
-let prices = [1, 2, 3, 4, 5, 6, 7, 2];
+let prices = [1, 2, 3, 4, 5, 6, 7, 2]
+
+const viableTriangle = (arr) => {
+arr.sort()
+
+for(let i =0; i< arr.length-2; i++){
+  let k = i+2
+  for(let j=1; j< arr.length-1 && arr[j] !=0; j++){
+    while(k < arr.length && nums[i] + nums[j]> nums[k]){
+      k++
+      if(k >= i + j){
+        return k
+      }
+    }
+
+  }
+}
+}
+
+console.log(viableTriangle(nums))
 
 // let string = 'Colin';
 
@@ -24,20 +43,20 @@ let prices = [1, 2, 3, 4, 5, 6, 7, 2];
 
 // console.log(rotateArr(matrix))
 
-const uniqueChar = str => {
-  let map = new Map();
-  for (let i = 0; i < str.length; i++) {
-    map.set(str[i], map.get(str[i]) + 1 || 1);
-  }
-  for (let i = 0; i < str.length; i++) {
-    if (map.get(str[i]) == 1) {
-      return i;
-    }
-  }
-  return -1;
-};
+// const uniqueChar = str => {
+//   let map = new Map();
+//   for (let i = 0; i < str.length; i++) {
+//     map.set(str[i], map.get(str[i]) + 1 || 1);
+//   }
+//   for (let i = 0; i < str.length; i++) {
+//     if (map.get(str[i]) == 1) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// };
 
-console.log(uniqueChar(s));
+// console.log(uniqueChar(s));
 
 // const anaSort = (str, str2) => {
 //   let a = str.split('').sort();
