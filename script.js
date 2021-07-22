@@ -19,19 +19,26 @@ let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 const viableTriangle = (arr) => {
 arr.sort()
 
-for(let i =0; i< arr.length-2; i++){
-  let k = i+2
-  for(let j=1; j< arr.length-1 && arr[j] !=0; j++){
-    while(k < arr.length && nums[i] + nums[j]> nums[k]){
-      k++
-      if(k >= i + j){
-        return k
+for(let i =0; i < arr.length -2; i++){
+  // let k = i+2
+  let j;
+  for(j=1; j< arr.length -1 && j!=0; j++){
+
+    if(i+ j == 1){
+      let count =[i, j]
+      
+      return count
+    }
+    // while(k < arr.length && nums[i] + nums[j]> nums[k]){
+    //   k++
+      // if(k >= i + j){
+      //   return k
       }
     }
 
   }
-}
-}
+// }
+// }
 
 console.log(viableTriangle(nums))
 
