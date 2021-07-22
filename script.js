@@ -4,7 +4,7 @@ let nums = [0, 1, 0, 1, 8];
 
 let nums1 = [1, 2, 2, 1];
 
-let nums2 = [2, 2];
+let nums2 = [1,2, 2, 6, 8, 3];
 
 let s = 'leetcode';
 
@@ -19,28 +19,23 @@ let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 const viableTriangle = (arr) => {
 arr.sort()
 
-for(let i =0; i < arr.length -2; i++){
-  // let k = i+2
+for(let i =0; i < arr.length -2 && arr[i]!=0; i++){
+  let k = i+2
   let j;
-  for(j=1; j< arr.length -1 && j!=0; j++){
+  for(j=1; j< arr.length -1 && arr[j]!=0; j++){
 
-    if(i+ j == 1){
-      let count =[i, j]
-      
-      return count
-    }
-    // while(k < arr.length && nums[i] + nums[j]> nums[k]){
-    //   k++
-      // if(k >= i + j){
-      //   return k
+    while(k < arr.length && arr[i] + arr[j]> arr[k]){
+      k++
+      let count =[arr[i], arr[j],arr[k]]
+      if(arr[k] >= arr[i] + arr[j]){
+        return count
       }
     }
-
   }
-// }
-// }
+}
+}
 
-console.log(viableTriangle(nums))
+console.log(viableTriangle(nums2))
 
 // let string = 'Colin';
 
