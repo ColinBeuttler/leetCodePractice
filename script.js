@@ -16,26 +16,50 @@ let t = 'hifi';
 
 let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
-const viableTriangle = (arr) => {
-arr.sort()
+let underScore = 'under_score'
 
-for(let i =0; i < arr.length -2 && arr[i]!=0; i++){
-  let k = i+2
-  let j;
-  for(j=1; j< arr.length -1 && arr[j]!=0; j++){
 
-    while(k < arr.length && arr[i] + arr[j]> arr[k]){
-      k++
-      let count =[arr[i], arr[j],arr[k]]
-      if(arr[k] >= arr[i] + arr[j]){
-        return count
-      }
-    }
-  }
-}
+
+const camelCase =(n)=>{
+ 
+ const splitWords = n.split('\n')
+ for(const w of splitWords ){
+   const[first, second]= n.split('_')
+    second.replace(second[0], second[0].toUpperCase())
+    
+  
+ }
 }
 
-console.log(viableTriangle(nums2))
+console.log(camelCase(underScore))
+// const mapDisc =new Map([
+//  ['Name', 'Thrasher'],
+//  ['Plastic', 'Big Z'],
+//  ['Color', 'Blue'],
+//  ['Weight', '165g'],
+// ]);
+
+
+// console.log(mapDisc)
+
+// const viableTriangle = (arr) => {
+// arr.sort()
+// for(let i =0; i < arr.length -2 && arr[i]!=0; i++){
+//   let k = i+2
+//   let j;
+//   for(j=1; j< arr.length -1 && arr[j]!=0; j++){
+//     while(k < arr.length && arr[i] + arr[j]> arr[k]){
+//       k++
+//       let count =[arr[i], arr[j],arr[k]]
+//       if(arr[k] >= arr[i] + arr[j]){
+//         return count
+//       }
+//     }
+//   }
+// }
+// }
+
+// console.log(viableTriangle(nums2))
 
 // let string = 'Colin';
 
