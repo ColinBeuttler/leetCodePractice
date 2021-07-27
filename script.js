@@ -16,9 +16,16 @@ let t = 'hifi';
 
 let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
+const addTax = value => rate => console.log(Number(`${value}`) + Number(`${value * rate}`))
+
+addTax('100')('.1')
+
+
 // let underScore = 'under_score'
 
-
+// const greet = greeting => name =>console.log(`${greeting} ${name}`)
+ 
+// greet('hello')('Colin')
 
 // const camelCase =(n)=>{
  
