@@ -16,21 +16,21 @@ let t = 'hifi';
 
 let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
-let underScore = 'under_score'
+// let underScore = 'under_score'
 
 
 
-const camelCase =(n)=>{
+// const camelCase =(n)=>{
  
- const splitWords = n.split('\n')
- for(const w of splitWords ){
-   const[first, second]= w.toLowerCase().trim().split('_')
-   const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
-   return output
- }
-}
+//  const splitWords = n.split('\n')
+//  for(const w of splitWords ){
+//    const[first, second]= w.toLowerCase().trim().split('_')
+//    const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+//    return output
+//  }
+// }
 
-console.log(camelCase(underScore))
+// console.log(camelCase(underScore))
 // const mapDisc =new Map([
 //  ['Name', 'Thrasher'],
 //  ['Plastic', 'Big Z'],
