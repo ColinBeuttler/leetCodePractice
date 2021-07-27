@@ -24,10 +24,9 @@ const camelCase =(n)=>{
  
  const splitWords = n.split('\n')
  for(const w of splitWords ){
-   const[first, second]= n.split('_')
-    second.replace(second[0], second[0].toUpperCase())
-    
-  
+   const[first, second]= w.toLowerCase().trim().split('_')
+   const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+   return output
  }
 }
 
