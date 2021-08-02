@@ -16,9 +16,30 @@ let t = 'hifi';
 
 let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
-const addTax = value => rate => console.log(Number(`${value}`) + Number(`${value * rate}`))
+const mergeSortArr = (arr1, arr2) =>{
+  let arr3 = arr1.concat(arr2)
+  arr3.sort()
+  console.log(arr3)
+}
 
-addTax('100')('.1')
+mergeSortArr(nums1, nums2)
+
+// const poll ={
+//   question: 'What is your favorite programming language?',
+//   options: ['0: Javascript','1:Python', '2:Rust', '3: C++' ],
+//   answers:new Array(4).fill(0),
+//   registerNewAnswer(){
+// const answer = Number(prompt(`${this.question}\n${this.options.join('\n')}(Write option number)`)) 
+// console.log(answer)
+//   }
+// }
+
+// poll.registerNewAnswer()
+
+
+// const addTax = value => rate => console.log(Number(`${value}`) + Number(`${value * rate}`))
+
+// addTax('100')('.1')
 
 
 // let underScore = 'under_score'
