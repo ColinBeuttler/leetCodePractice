@@ -14,23 +14,53 @@ let x = 'lectedoe';
 
 let t = 'hifi';
 
-let prices = [1, 2, 3, 4, 5, 6, 7, 2]
+// let prices = [1, 2, 3, 4, 5, 6, 7, 2]
+
+const Car =function(make, speed){
+  this.make = make
+  this.speed = speed
+}
+
+const car1 =new Car ('Bmw', 120)
+const car2 = new Car('Mercedes', 95)
+
+Car.prototype.accelerate = function(){
+  this.speed +=10
+  console.log(`${this.speed}`)
+}
+
+Car.prototype.brake = function(){
+  this.speed -=5
+  console.log(`${this.speed}`)
+}
+
+
+// const versions =[1,2,3,4,5]
+
+// const badVersion =(versionsOf) =>{
+//   for(const w of versionsOf){
+//     if(w== isBadVersion){
+//       return w
+//     }
+//   }
+// }
+// console.log(isBadVersion(versions))
 
 // Input: n = 5, bad = 4
 // Output: 4
 // Explanation:
-// call isBadVersion(3) -> false
-// call isBadVersion(5) -> true
-// call isBadVersion(4) -> true
+// isBadVersion(3) = false
+// isBadVersion(5) = true
+// isBadVersion(4) = true
 // Then 4 is the first bad version.
 
-const mergeSortArr = (arr1, arr2) =>{
-  let arr3 = arr1.concat(arr2)
-  arr3.sort()
-  console.log(arr3)
-}
+// const mergeSortArr = (arr1, arr2) =>{
+//   let arr3 = arr1.concat(arr2)
+//   arr3.sort()
+//   console.log(arr3)
+// }
 
-mergeSortArr(nums1, nums2)
+// mergeSortArr(nums1, nums2)
 
 // const poll ={
 //   question: 'What is your favorite programming language?',
