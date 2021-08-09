@@ -16,13 +16,28 @@ let t = 'hifi';
 
 // let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
+class Car {
+    constructor(make, speed){
+        this.make = make;
+        this.speed = speed;
+    }
+    get SpeedUs(){
+        return this.speed/1.6
+    }
+}
+
 // const Car =function(make, speed){
 //   this.make = make
 //   this.speed = speed
 // }
 
-// const car1 =new Car ('Bmw', 120)
-// const car2 = new Car('Mercedes', 95)
+const car1 =new Car ('Bmw', 120)
+const car2 = new Car('Mercedes', 95)
+const car3 = new Car('Ford', 85);
+
+console.log(car1)
+console.log(car2)
+console.log(car3)
 
 // Car.prototype.accelerate = function(){
 //   this.speed +=10
