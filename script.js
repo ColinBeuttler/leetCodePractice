@@ -24,20 +24,20 @@ let prices = [1, 2, 3, 4, 5, 6, 7, 2];
 
 // console.log(rotateArr(matrix))
 
-const uniqueChar = str => {
-  let map = new Map();
-  for (let i = 0; i < str.length; i++) {
-    map.set(str[i], map.get(str[i]) + 1 || 1);
-  }
-  for (let i = 0; i < str.length; i++) {
-    if (map.get(str[i]) == 1) {
-      return i;
-    }
-  }
-  return -1;
-};
+// const uniqueChar = str => {
+//   let map = new Map();
+//   for (let i = 0; i < str.length; i++) {
+//     map.set(str[i], map.get(str[i]) + 1 || 1);
+//   }
+//   for (let i = 0; i < str.length; i++) {
+//     if (map.get(str[i]) == 1) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// };
 
-console.log(uniqueChar(s));
+// console.log(uniqueChar(s));
 
 // const anaSort = (str, str2) => {
 //   let a = str.split('').sort();
