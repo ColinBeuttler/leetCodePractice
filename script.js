@@ -4,7 +4,7 @@ let nums = [0, 1, 0, 1, 8];
 
 let nums1 = [1, 2, 2, 1];
 
-let nums2 = [2, 2];
+let nums2 = [1,2, 2, 6, 8, 3];
 
 let s = 'leetcode';
 
@@ -14,7 +14,132 @@ let x = 'lectedoe';
 
 let t = 'hifi';
 
-let prices = [1, 2, 3, 4, 5, 6, 7, 2];
+// let prices = [1, 2, 3, 4, 5, 6, 7, 2]
+
+class Car {
+    constructor(make, speed){
+        this.make = make;
+        this.speed = speed;
+    }
+    get SpeedUs(){
+        return this.speed/1.6
+    }
+}
+
+// const Car =function(make, speed){
+//   this.make = make
+//   this.speed = speed
+// }
+
+const car1 =new Car ('Bmw', 120)
+const car2 = new Car('Mercedes', 95)
+const car3 = new Car('Ford', 85);
+
+console.log(car1)
+console.log(car2)
+console.log(car3)
+
+// Car.prototype.accelerate = function(){
+//   this.speed +=10
+//   console.log(`${this.speed}`)
+// }
+
+// Car.prototype.brake = function(){
+//   this.speed -=5
+//   console.log(`${this.speed}`)
+// }
+
+
+// const versions =[1,2,3,4,5]
+
+// const badVersion =(versionsOf) =>{
+//   for(const w of versionsOf){
+//     if(w== isBadVersion){
+//       return w
+//     }
+//   }
+// }
+// console.log(isBadVersion(versions))
+
+// Input: n = 5, bad = 4
+// Output: 4
+// Explanation:
+// isBadVersion(3) = false
+// isBadVersion(5) = true
+// isBadVersion(4) = true
+// Then 4 is the first bad version.
+
+// const mergeSortArr = (arr1, arr2) =>{
+//   let arr3 = arr1.concat(arr2)
+//   arr3.sort()
+//   console.log(arr3)
+// }
+
+// mergeSortArr(nums1, nums2)
+
+// const poll ={
+//   question: 'What is your favorite programming language?',
+//   options: ['0: Javascript','1:Python', '2:Rust', '3: C++' ],
+//   answers:new Array(4).fill(0),
+//   registerNewAnswer(){
+// const answer = Number(prompt(`${this.question}\n${this.options.join('\n')}(Write option number)`)) 
+// console.log(answer)
+//   }
+// }
+
+// poll.registerNewAnswer()
+
+
+// const addTax = value => rate => console.log(Number(`${value}`) + Number(`${value * rate}`))
+
+// addTax('100')('.1')
+
+
+// let underScore = 'under_score'
+
+// const greet = greeting => name =>console.log(`${greeting} ${name}`)
+ 
+// greet('hello')('Colin')
+
+// const camelCase =(n)=>{
+ 
+//  const splitWords = n.split('\n')
+//  for(const w of splitWords ){
+//    const[first, second]= w.toLowerCase().trim().split('_')
+//    const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+//    return output
+//  }
+// }
+
+// console.log(camelCase(underScore))
+// const mapDisc =new Map([
+//  ['Name', 'Thrasher'],
+//  ['Plastic', 'Big Z'],
+//  ['Color', 'Blue'],
+//  ['Weight', '165g'],
+// ]);
+
+
+// console.log(mapDisc)
+
+// const viableTriangle = (arr) => {
+// arr.sort()
+// for(let i =0; i < arr.length -2 && arr[i]!=0; i++){
+//   let k = i+2
+//   let j;
+//   for(j=1; j< arr.length -1 && arr[j]!=0; j++){
+//     while(k < arr.length && arr[i] + arr[j]> arr[k]){
+//       k++
+//       let count =[arr[i], arr[j],arr[k]]
+//       if(arr[k] >= arr[i] + arr[j]){
+//         return count
+//       }
+//     }
+//   }
+// }
+// }
+
+// console.log(viableTriangle(nums2))
 
 // let string = 'Colin';
 
