@@ -14,16 +14,16 @@ let x = 'lectedoe';
 
 let t = 'hifi';
 
-const getPosition = function () {
-  return new Promise(function (resolve, reject) {
-    navigator.geolocation.getCurrentPosition(
-      position => resolve(position),
-      err => reject(err)
-    );
-  });
-};
+// const getPosition = function () {
+//   return new Promise(function (resolve, reject) {
+//     navigator.geolocation.getCurrentPosition(
+//       position => resolve(position),
+//       err => reject(err)
+//     );
+//   });
+// };
 
-console.log('Finding your position');
+// console.log('Finding your position');
 
 ///////////////////////////////////////
 // Coding Challenge #2
@@ -43,6 +43,30 @@ PART 2
 TEST DATA: Images in the img folder. Test the error handler by passing a wrong image path. Set the network speed to 'Fast 3G' in the dev tools Network tab, otherwise images load too fast.
 GOOD LUCK 😀
 */
+
+const imgBox = document.querySelector('.boxIMG');
+
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+const createImage = function (imgPath) {
+  return new Promise(function (resolve, reject) {
+    const img = document.createElement('img');
+    img.src = imgPath;
+
+    img.addEventListener('load', function () {
+      imgBox.append(img);
+      resolve(img);
+    });
+
+    img.addEventListener('error', function () {
+      reject(new Error('Image not found'));
+    });
+  });
+};
 
 // let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
