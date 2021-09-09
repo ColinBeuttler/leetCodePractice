@@ -68,25 +68,37 @@ const createImage = function (imgPath) {
   });
 };
 
-const loadNPause = async function (imgPath) {
-  try {
-    let img = await createImage('img/img-1.png');
-    console.log('img1 loaded');
-    await wait(2);
-    img.style.display = 'none';
-    await wait(2);
+// const loadNPause = async function (imgPath) {
+//   try {
+//     let img = await createImage('img/img-1.png');
+//     console.log('img1 loaded');
+//     await wait(2);
+//     img.style.display = 'none';
+//     await wait(2);
 
-    img = await createImage('img/img-2.jpg');
-    console.log('img2 loaded');
-    await wait(2);
-    img.style.display = 'none';
+//     img = await createImage('img/img-2.jpg');
+//     console.log('img2 loaded');
+//     await wait(2);
+//     img.style.display = 'none';
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
+// loadNPause();
+
+const loadAll = async function () {
+  try {
+    const imgs = imgArr.map(async img => await createImage(img));
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => img.classList.add('parallel'));
   } catch (err) {
     console.error(err);
   }
 };
 
-loadNPause();
-
+loadAll('img/img-1.png', 'img/img-2.jpg');
 // let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
 // class Car {
