@@ -44,29 +44,29 @@ TEST DATA: Images in the img folder. Test the error handler by passing a wrong i
 GOOD LUCK 😀
 */
 
-const imgBox = document.querySelector('.boxIMG');
+// const imgBox = document.querySelector('.boxIMG');
 
-const wait = function (seconds) {
-  return new Promise(function (resolve) {
-    setTimeout(resolve, seconds * 1000);
-  });
-};
+// const wait = function (seconds) {
+//   return new Promise(function (resolve) {
+//     setTimeout(resolve, seconds * 1000);
+//   });
+// };
 
-const createImage = function (imgPath) {
-  return new Promise(function (resolve, reject) {
-    const img = document.createElement('img');
-    img.src = imgPath;
+// const createImage = function (imgPath) {
+//   return new Promise(function (resolve, reject) {
+//     const img = document.createElement('img');
+//     img.src = imgPath;
 
-    img.addEventListener('load', function () {
-      imgBox.append(img);
-      resolve(img);
-    });
+//     img.addEventListener('load', function () {
+//       imgBox.append(img);
+//       resolve(img);
+//     });
 
-    img.addEventListener('error', function () {
-      reject(new Error('Image not found'));
-    });
-  });
-};
+//     img.addEventListener('error', function () {
+//       reject(new Error('Image not found'));
+//     });
+//   });
+// };
 
 // const loadNPause = async function (imgPath) {
 //   try {
@@ -87,18 +87,18 @@ const createImage = function (imgPath) {
 
 // loadNPause();
 
-const loadAll = async function () {
-  try {
-    const imgs = imgArr.map(async img => await createImage(img));
-    const imgsEl = await Promise.all(imgs);
-    console.log(imgsEl);
-    imgsEl.forEach(img => img.classList.add('parallel'));
-  } catch (err) {
-    console.error(err);
-  }
-};
+// const loadAll = async function (imgArr) {
+//   try {
+//     const imgs = imgArr.map(async img => await createImage(img));
+//     const imgsEl = await Promise.all(imgs);
+//     console.log(imgsEl);
+//     imgsEl.forEach(img => img.classList.add('parallel'));
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
 
-loadAll('img/img-1.png', 'img/img-2.jpg');
+// loadAll(['img/img-1.png', 'img/img-2.jpg']);
 // let prices = [1, 2, 3, 4, 5, 6, 7, 2]
 
 // class Car {
