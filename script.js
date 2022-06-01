@@ -1,18 +1,240 @@
 'use strict';
 
-let nums = [0, 1, 0, 1, 8];
+// ////////////////////////////////////Palindrome String
 
-let nums1 = [1, 2, 2, 1];
+let x = 121;
 
-let nums2 = [1, 2, 2, 6, 8, 3];
+const plainDrome = function (x) {
+  let str = x.toString();
+  let reverse = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i];
+  }
+  if (+reverse === x) return true;
+  else return false;
+  // return +reverse;
+};
 
-let s = 'leetcode';
+console.log(plainDrome(x));
 
-let v = 'edocteel';
+// ///////////////////////////////////Roman Numerals
 
-let x = 'lectedoe';
+// let romanNum = 'iii';
 
-let t = 'hifi';
+// const numerals = {
+//   i: 1,
+//   v: 5,
+//   x: 10,
+//   l: 50,
+//   c: 100,
+//   d: 500,
+//   m: 1000,
+// };
+
+// const splitRoman = function (roman) {
+//   for (let i = 0; i < roman.length; i++) {}
+// };
+
+// splitRoman(romanNum);
+
+// ///////////////////////////////////Happy Number
+
+// let n = 19;
+
+// const happyNumber = function (num) {
+//   if (num < 0) return false;
+//   let n = num;
+//   let digits = ('' + n).split('').map(Number);
+//   let sr = Math.pow(digits[0], 2) + Math.pow(digits[1], 2);
+//   num = sr;
+
+//   return true;
+// };
+
+// console.log(happyNumber(n));
+
+// ///////////////////////////////////arithmetic progression
+
+// let nums = [1, 1000];
+
+// const arithProg = function (arr) {
+//   arr.sort(function (a, b) {
+//     return b - a;
+//   });
+//   let diff = arr[0] - arr[1];
+
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] - arr[i + 1] != diff) return false;
+//   }
+//   return true;
+// };
+
+// console.log(arithProg(nums));
+
+// ///////////////////////////////////Product of an array
+
+// let nums = [-1, -2, -3, -4, 3, 2, 1];
+
+// const arrproduct = function (nums) {
+//   let sum = 1;
+//   for (let val of nums) {
+//     sum *= val;
+//   }
+//   if (sum > 0) return 1;
+//   if (sum < 0) return -1;
+//   return 0;
+// };
+
+// console.log(arrproduct(nums));
+
+// ////////////////////////////////// Nearest point of X and Y
+
+// let x = 3;
+
+// let y = 4;
+
+// let points = [
+//   [1, 2],
+//   [3, 1],
+//   [2, 4],
+//   [2, 3],
+//   [4, 4],
+// ];
+
+// const work = function (x, y, points) {
+//   points.forEach(([a, b], i) => {
+//     if (a === x || b === y) {
+//       return i;
+//     }
+//   });
+// };
+
+// console.log(work());
+
+// const manhatDist = function (x, y, points) {
+//   let min = +Infinity;
+//   let ans = -1;
+//   points.forEach(([a, b], i) => {
+//     if (a == x || b == y) {
+//       let diff = Math.abs(x - a) + Math.abs(y - b);
+//       if (diff < min) {
+//         min = diff;
+//         ans = i;
+//       }
+//     }
+//   });
+//   return ans;
+// };
+
+// console.log(manhatDist());
+
+// //////////////////////////////Area of a Triangle
+
+// let a = [1, 1, 2];
+
+// const areaCalc = function (arr) {
+//   let sortd = arr.sort();
+//   for (let i = 0; i < sortd.length; i++) {}
+// };
+
+// /////////////////////////////Subtract the Sum and the Multiple
+// const subtractProductAndSum = function(n) {
+//   let num =JSON.stringify(n).split('').map(Number);
+
+// let a = num.reduce((acc, cur) => {
+// return acc * cur;
+// });
+
+//   let b = num.reduce((acc, cur) => {
+// return acc + cur;
+// }, 0);
+
+//   return(a-b)
+// };
+
+// let n = 234;
+
+// const num = JSON.stringify(n).split('');
+
+// console.log(num);
+
+// const a = num.reduce((acc, cur) => {
+//   let mult = Number(acc * cur);
+//   let add = Number(acc + cur);
+//   return mult, add;
+// });
+
+// console.log(mult - add);
+// //////////////////////////////// Find the 1's in binary
+// let n = 0000000000000000000000000001011;
+
+// const bitFind = () => {
+
+//   let matches = n.match(/(\d+)/);
+
+//   if (matches) {
+//     document.getElementById('1').innerHTML = matches[0];
+//   }
+// };
+
+//
+
+// const bitFind = function (str) {
+//   let bits = 0;
+//   for (let i = 0; i < 32; i++) {
+//     if (str & (1 === 1)) bits++;
+//     str >>= 1;
+//   }
+//   return bits;
+// };
+
+// console.log(bitFind(n));
+
+// ///////////////////////////////////// Find the average Salary
+// let salary = [4000, 3000, 1000, 2000];
+
+// const avgFinder = salary => {
+//   let sortd = salary.sort((a, b) => a + b);
+//   sortd.shift();
+//   sortd.pop();
+//   let avg = sortd.reduce((sum, cur) => sum + cur) / sortd.length;
+//   console.log(avg);
+// };
+
+// avgFinder(salary);
+
+// let low = 3;
+
+// let high = 7;
+
+// let oddInt = [];
+
+// let findOddInt = (low, high) => {
+//   if (low % 2 != 0 || high % 2 != 0) return Math.floor((high - low) / 2) + 1;
+//   else return Math.floor((high - low) / 2);
+// };
+
+// while (low <= high) {
+//   if (low % 2 != 0) {
+//     console.log(low);
+//     oddInt.push(low);
+//   }
+//   low++;
+// }
+
+// let nums = [0, 1, 0, 1, 8];
+
+// let nums1 = [1, 2, 2, 1];
+
+// let nums2 = [1, 2, 2, 6, 8, 3];
+
+// let s = 'leetcode';
+
+// let v = 'edocteel';
+
+// let x = 'lectedoe';
+
+// let t = 'hifi';
 
 // const getPosition = function () {
 //   return new Promise(function (resolve, reject) {
@@ -24,115 +246,6 @@ let t = 'hifi';
 // };
 
 // console.log('Finding your position');
-
-///////////////////////////////////////
-// Coding Challenge #2
-
-/* 
-Build the image loading functionality that I just showed you on the screen.
-Tasks are not super-descriptive this time, so that you can figure out some stuff on your own. Pretend you're working on your own 😉
-PART 1
-1. Create a function 'createImage' which receives imgPath as an input. This function returns a promise which creates a new image (use document.createElement('img')) and sets the .src attribute to the provided image path. When the image is done loading, append it to the DOM element with the 'images' class, and resolve the promise. The fulfilled value should be the image element itself. In case there is an error loading the image ('error' event), reject the promise.
-If this part is too tricky for you, just watch the first part of the solution.
-PART 2
-2. Comsume the promise using .then and also add an error handler;
-3. After the image has loaded, pause execution for 2 seconds using the wait function we created earlier;
-4. After the 2 seconds have passed, hide the current image (set display to 'none'), and load a second image (HINT: Use the image element returned by the createImage promise to hide the current image. You will need a global variable for that 😉);
-5. After the second image has loaded, pause execution for 2 seconds again;
-6. After the 2 seconds have passed, hide the current image.
-TEST DATA: Images in the img folder. Test the error handler by passing a wrong image path. Set the network speed to 'Fast 3G' in the dev tools Network tab, otherwise images load too fast.
-GOOD LUCK 😀
-*/
-
-// const imgBox = document.querySelector('.boxIMG');
-
-// const wait = function (seconds) {
-//   return new Promise(function (resolve) {
-//     setTimeout(resolve, seconds * 1000);
-//   });
-// };
-
-// const createImage = function (imgPath) {
-//   return new Promise(function (resolve, reject) {
-//     const img = document.createElement('img');
-//     img.src = imgPath;
-
-//     img.addEventListener('load', function () {
-//       imgBox.append(img);
-//       resolve(img);
-//     });
-
-//     img.addEventListener('error', function () {
-//       reject(new Error('Image not found'));
-//     });
-//   });
-// };
-
-// const loadNPause = async function (imgPath) {
-//   try {
-//     let img = await createImage('img/img-1.png');
-//     console.log('img1 loaded');
-//     await wait(2);
-//     img.style.display = 'none';
-//     await wait(2);
-
-//     img = await createImage('img/img-2.jpg');
-//     console.log('img2 loaded');
-//     await wait(2);
-//     img.style.display = 'none';
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
-
-// loadNPause();
-
-// const loadAll = async function (imgArr) {
-//   try {
-//     const imgs = imgArr.map(async img => await createImage(img));
-//     const imgsEl = await Promise.all(imgs);
-//     console.log(imgsEl);
-//     imgsEl.forEach(img => img.classList.add('parallel'));
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
-
-// loadAll(['img/img-1.png', 'img/img-2.jpg']);
-// let prices = [1, 2, 3, 4, 5, 6, 7, 2]
-
-// class Car {
-//     constructor(make, speed){
-//         this.make = make;
-//         this.speed = speed;
-//     }
-//     get SpeedUs(){
-//         return this.speed/1.6
-//     }
-// }
-
-// const Car =function(make, speed){
-//   this.make = make
-//   this.speed = speed
-// }
-
-// const car1 =new Car ('Bmw', 120)
-// const car2 = new Car('Mercedes', 95)
-// const car3 = new Car('Ford', 85);
-
-// console.log(car1)
-// console.log(car2)
-// console.log(car3)
-
-// Car.prototype.accelerate = function(){
-//   this.speed +=10
-//   console.log(`${this.speed}`)
-// }
-
-// Car.prototype.brake = function(){
-//   this.speed -=5
-//   console.log(`${this.speed}`)
-// }
 
 // const versions =[1,2,3,4,5]
 
