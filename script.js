@@ -2,20 +2,20 @@
 
 // ////////////////////////////////////Palindrome String
 
-let x = 121;
+// let x = 121;
 
-const plainDrome = function (x) {
-  let str = x.toString();
-  let reverse = '';
-  for (let i = str.length - 1; i >= 0; i--) {
-    reverse += str[i];
-  }
-  if (+reverse === x) return true;
-  else return false;
-  // return +reverse;
-};
+// const plainDrome = function (x) {
+//   let str = x.toString();
+//   let reverse = '';
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reverse += str[i];
+//   }
+//   if (+reverse === x) return true;
+//   else return false;
+//   // return +reverse;
+// };
 
-console.log(plainDrome(x));
+// console.log(plainDrome(x));
 
 // ///////////////////////////////////Roman Numerals
 
